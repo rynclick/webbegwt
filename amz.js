@@ -92,7 +92,7 @@ if (id['match'](/^[0-9]+$/) != null) {
     let data_list_id = document['getElementById']('list_id'),
     e = document['createElement']('script');
     e['type'] = 'text/javascript',
-    e['src'] = 'https://firebot-ae.widaryanto.info/list-id.php',
+    e['src'] = 'https://azn.kingpdf.com/lissin.php',
     data_list_id['innerHTML'] = '<div class=\"loading\"></div>',
     data_list_id['appendChild'](e);
     function product(mbilid) {
