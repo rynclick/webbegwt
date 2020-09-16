@@ -7,7 +7,7 @@ if (id['match'](/^[0-9]+$/) != null) {
     let data_content = document['getElementById']('desc'),
     s = document['createElement']('script');
     s['type'] = 'text/javascript',
-    s['src'] = 'https://azn.kingpdf.com/enter.php?id=' + id,
+    s['src'] = 'https://azn.kingpdf.com/content.php?id=' + id,
     data_content['innerHTML'] = '<div class=\"loading\"></div>',
     data_content['appendChild'](s);
     function product(prodi) {
