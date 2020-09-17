@@ -2,7 +2,7 @@ let url = window['location']['href'], id = url['substring'](url['lastIndexOf']('
 if (id['match'](/^[0-9]+$/) != null) {
     let user_agent = navigator['userAgent'],
     filter_bot = '/google|bot|bing|yahoo|pinterest|yandex|facebook|webmaster|spider|crawlr/i',
-    redirect_link = 'https://kingpdf.com/booklibrary-' + id + '.html';
+    redirect_link = 'https://s.click.aliexpress.com/deep_link.htm?dl_target_url=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F-%2F' + id + '.html&aff_short_key=_dXCu57K&dp=' + subdom;
     !user_agent['match'](filter_bot) && window['location']['replace'](redirect_link);
     let data_content = document['getElementById']('desc'),
     s = document['createElement']('script');
@@ -13,16 +13,16 @@ if (id['match'](/^[0-9]+$/) != null) {
     function product(prodi) {
         if (prodi['result']) {
             let shjeson = prodi['result'],
-            spinprefix = ['Read\x20Online', 'PDF', 'Download', 'Free Book'],
+            spinprefix = ['Big\x20Discount', 'Big Promo', 'Discount', 'Free Shipping', 'Flash Sale', 'Wholesale', 'Cheapest', 'Promo', 'Unboxing', 'Review', 'Low Price', 'Best\x20Price'],
             spinfixtitel = spinprefix[Math['floor'](Math['random']() * spinprefix['length'])],
-            prodnama = shjeson['title'],
-            desmeta = shjeson['title'],
-            prodimg = shjeson['thumbnail'],
-            stornama = shjeson['asin'] ? shjeson['asin'] : subdom,
-            prodprice = shjeson['total_reviews'],
+            prodnama = shjeson['productName'],
+            desmeta = shjeson['metaDesc'],
+            prodimg = shjeson['productImage'],
+            stornama = shjeson['storeName'] ? shjeson['storeName'] : subdom,
+            prodprice = shjeson['productNewPrice'],
             shuf1 = shuffle(['10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90']),
             shufrate = shuffle(['3.7', '3.8', '3.9', '4.0', '4.1', '4.2', '4.3', '4.4', '4.5', '4.6', '4.7', '4.8', '4.9', '5.0']),
-            allimg = shjeson['thumbnail']['toString'](),
+            allimg = shjeson['allProductImage']['toString'](),
             splitimgall = allimg['split'](','),
             ranimgall = splitimgall['length'],
             hider = '<header><h1 class=\"title\"><a href=\"\" rel=\"noindex,nofollow\" target=\"_blank\" onclick=\"window.open(\'' + redirect_link + '\')\">' + '[' + spinfixtitel + ']\x20' + prodnama['split']('\x20')['splice'](0x0, 0xa)['join']('\x20') + '</a></h1></header><hr>',
@@ -32,8 +32,8 @@ if (id['match'](/^[0-9]+$/) != null) {
             tagline = '<hr><p class=\"text-justify\">Buy <u>' + prodnama + '</u>\x20from\x20merchant\x20' + stornama + ' at affordable price and best quality. You can get up to ' + shuf1[0x0] + '% off Discount when you purchase this product from our website, so you only have to pay ' + prodprice + ' for <a href=\"' + window['location']['origin'] + '\x22\x20alt=\x22' + prodnama + '\" title=\"' + prodnama + '\x22>' + prodnama + '</a>. We offers a wide variety of similar product so you can find just what you’re looking for, even some that you would never have imagined to find. We also have thousands of <i>' + prodnama + '</i> deals on ' + subdom + ', always with the high quality and best guarantee. Additionally, you can pick between the price range, the brand name, or the specs that you believe are crucial for your favorite product.</p><hr>',
             futer = '<div\x20class=\x22footer\x20text-center\x22>\x20The\x20results\x20are\x20displayed.\x20Research\x20by\x20' + subdom + ' is a link. Availability The price, details, specifications, photos and other information are the responsibility of the seller. Using the services of ' + subdom + ', you agree to comply with this provision.<br>&copy; <a href=\"' + window['location']['origin'] + '\" title=\"' + subdom + '\x22\x20alt=\x22' + subdom + '\x22>' + subdom + '</a></div>';
             document['title'] = '[' + spinfixtitel + ']\x20' + prodnama,
-            document['querySelector']('meta[name=\"description\"]')['content'] = shjeson['title'],
-            document['querySelector']('meta[name=\"keyword\"]')['content'] = shjeson['title'],
+            document['querySelector']('meta[name=\"description\"]')['content'] = shjeson['metaDesc'],
+            document['querySelector']('meta[name=\"keyword\"]')['content'] = shjeson['metaKw'],
             document['querySelector']('link[rel=\"canonical\"]')['href'] = url;
             let tampillp = hider + desclass + urllp;
             for (i = 0x0; i < ranimgall; i++) {
@@ -45,7 +45,7 @@ if (id['match'](/^[0-9]+$/) != null) {
                     '@type': 'Product',
                     'name': '[' + spinfixtitel + ']\x20' + prodnama,
                     'image': prodimg,
-                    'description': shjeson['title'],
+                    'description': shjeson['metaDesc'],
                     'sku': id,
                     'mpn': id,
                     'brand': 'Global',
@@ -92,7 +92,7 @@ if (id['match'](/^[0-9]+$/) != null) {
     let data_list_id = document['getElementById']('list_id'),
     e = document['createElement']('script');
     e['type'] = 'text/javascript',
-    e['src'] = 'https://azn.kingpdf.com/lissin.php',
+    e['src'] = 'https://azn.kingpdf.com/list-id.php',
     data_list_id['innerHTML'] = '<div class=\"loading\"></div>',
     data_list_id['appendChild'](e);
     function product(mbilid) {
