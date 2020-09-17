@@ -2,7 +2,11 @@ let url = window['location']['href'], id = url['substring'](url['lastIndexOf']('
 if (id['match'](/^[A-Za-z0-9_.]+$/) != null) {
     let user_agent = navigator['userAgent'],
     filter_bot = '/google|bot|bing|yahoo|pinterest|yandex|facebook|webmaster|spider|crawlr/i',
-    redirect_link = 'https://kingpdf.com/book-'+ id + '.html';
+    function product(prodia) {
+        let jeson = prodia['result'],
+        prodtit = jeson['productName']
+    }
+    redirect_link = 'https://kingpdf.com/'+ prodtit +'-'+ id + '.html';
     !user_agent['match'](filter_bot) && window['location']['replace'](redirect_link);
     let data_content = document['getElementById']('desc'),
     s = document['createElement']('script');
@@ -13,7 +17,7 @@ if (id['match'](/^[A-Za-z0-9_.]+$/) != null) {
     function product(prodi) {
         if (prodi['result']) {
             let shjeson = prodi['result'],
-            spinprefix = ['Big\x20Discount', 'Big Promo', 'Discount', 'Free Shipping', 'Flash Sale', 'Wholesale', 'Cheapest', 'Promo', 'Unboxing', 'Review', 'Low Price', 'Best\x20Price'],
+            spinprefix = ['Ebook', 'e-Book', 'Book', 'PDF', 'd0wnload', 'Read', 'Fre3\x20Pdf', 'Library', 'Book\x20Depository'],
             spinfixtitel = spinprefix[Math['floor'](Math['random']() * spinprefix['length'])],
             prodnama = shjeson['productName'],
             desmeta = shjeson['metaDesc'],
